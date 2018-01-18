@@ -1,4 +1,5 @@
 #Male 1: Part 1
+
 #Seen near a specific creature location
 
 VAR has_food = false
@@ -8,10 +9,11 @@ VAR has_outfit = false
 
 
 === Male1Part1 ===
+
 * <i>What's wrong?</i>
 
 - Huh? Oh...
-Well, I'm a little embarrased
+    Well, I'm a little embarrased
 
 * [Creatures?] <i>Is it those creatures?</i>
 
@@ -57,15 +59,16 @@ But how?
 
 {
     - has_food:
-        + { has_food } [Give Food] -> give_food
+        * { has_food } [Give Food] -> give_food
         
     - else:
         Did you get some of the food?
         
-        + [No] None yet, sorry. -> Male1Part2
+        * [No] None yet, sorry. -> Male1Part2
 }
 
 = give_food
+
 ~has_food = false
 
 <i>I'm starting to understand your fixation with these creatures... Here you go!</i>
@@ -77,7 +80,9 @@ My Fuu will be very grateful!
 
 -> END
 
+
 === Male1Part3a ===
+
 + {not has_outfit} [Put On Outfit] <i>You put on the outfit.</i>
     ~has_outfit = true
     -> Male1Part3a
@@ -99,6 +104,7 @@ My Fuu will be very grateful!
 - \*GULP*
 
 <i>Sex: Cums almost immediately</i>
+
 * [Nice] <i>You did really well!</i>
 
 - You think?
@@ -113,7 +119,9 @@ Time passes...
 
 -> Male1Part3b
 
+
 === Male1Part3b ===
+
 + {not has_outfit} [Put On Outfit] <i>You put on the outfit.</i>
     ~has_outfit = true
     -> Male1Part3b
@@ -154,7 +162,9 @@ Time passes...
 
 -> Male1Part3c
 
+
 === Male1Part3c ===
+
 + {not has_outfit} [Put On Outfit] <i>You put on the outfit.</i>
     ~has_outfit = true
     -> Male1Part3c
