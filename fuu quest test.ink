@@ -13,7 +13,7 @@ VAR has_outfit = false
 * <i>What's wrong?</i>
 
 - Huh? Oh...
-    Well, I'm a little embarrased
+Well, I'm a little embarrased
 
 * [Creatures?] <i>Is it those creatures?</i>
 
@@ -149,7 +149,7 @@ Time passes...
 - <i>Sex: Lasts much longer before cumming.</i>
 
 * <i>Gosh, you really have gotten better...</i>
-    <i>My legs are shaking after that one.</i>
+<i>My legs are shaking after that one.</i>
 
 - Really? Wow!
 
@@ -191,7 +191,7 @@ Time passes...
 <i>Sex</i>
 
 * <i>You've really gotten the hang of this haven't you!</i>
-    <i>I was ready to burst from the beginning~</i>
+<i>I was ready to burst from the beginning~</i>
     
 - All thanks to you really~
 
