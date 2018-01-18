@@ -1,5 +1,4 @@
 #Male 1: Part 1
-
 #Seen near a specific creature location
 
 VAR has_food = false
@@ -12,7 +11,7 @@ VAR has_outfit = false
 * <i>What's wrong?</i>
 
 - Huh? Oh...
-    Well, I'm a little embarrased
+Well, I'm a little embarrased
 
 * [Creatures?] <i>Is it those creatures?</i>
 
@@ -33,7 +32,6 @@ But how?
 * [Get Food?] <i>I could get the food for you!</i>
     You would do that?! Thank you so much!
     -> Male1Part2
-    
 * [Practice?] <i>What if you had some more practice?</i>
 
 - What do you mean?
@@ -59,12 +57,12 @@ But how?
 
 {
     - has_food:
-        * { has_food } [Give Food] -> give_food
+        + { has_food } [Give Food] -> give_food
         
     - else:
         Did you get some of the food?
         
-        * [No] None yet, sorry. -> Male1Part2
+        + [No] None yet, sorry. -> Male1Part2
 }
 
 = give_food
