@@ -38,5 +38,5 @@ MonoBehaviour:
     jsonAsset: {fileID: 0}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 6a66406246330cd4f85ed0e149236a23, type: 3}
-    jsonAsset: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 71c4af1350ee9054cb975e3b86f77abd, type: 3}
   compilationStack: []
