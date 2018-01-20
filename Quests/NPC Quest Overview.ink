@@ -56,6 +56,9 @@ INCLUDE Ghost.ink
 + [Futa 3 (part 3b)] <h3> Futa 3 </h3> -> Futa03Part03b ->
 + [Futa 3 (part 4)] <h3> Futa 3 </h3> -> Futa03Part04 ->
 
++ [Ghost (part 1)] <h3> Ghost</h3> -> GhostPart01 ->
++ [Ghost (part 2)] <h3> Ghost</h3> -> GhostPart02 ->
+
 + Back -> TableOfContents
 
 - -> TableOfContents.shortcuts

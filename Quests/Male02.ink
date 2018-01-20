@@ -29,7 +29,10 @@ And I didn’t exactly grow all these ingredients myself...
 I had to use some school resources.
 
 + <i>Okay, okay![] Calm down. I won't say anything.</i>
-+ <i>You're in trouble.</i> -> Futa03Part01
++ <i>You're in trouble.</i>
+<h3> Futa 3 </h3>
+<h4> Part 2 </h4>
+-> Futa03Part02.potion
 
 - \*Sigh* Thank you.
 I would really be in trouble if the professor knew.
@@ -120,7 +123,10 @@ I'm so close to the edge but I can't get off!
 Got any ideas?!
 
 + <i>[I can fix this...] Okay, okay... I think I have an idea. Just... Don't move.</i>
-+ <i>I better get the professor!</i> -> Futa03Part02.potion
++ [<i>I better get the professor!</i>]
+<h3> Futa 3 </h3>
+<h4> Part 2 </h4>
+-> Futa03Part02.potion
 
 - <i>(Sex: Milking his dick while eating his ass)</i>
 
