@@ -158,15 +158,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22491254, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -388.6709
       objectReference: {fileID: 0}
     - target: {fileID: 22491254, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 623.924
+      value: 634.0506
       objectReference: {fileID: 0}
     - target: {fileID: 22491254, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 27.721518
       objectReference: {fileID: 0}
     - target: {fileID: 22491254, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_AnchorMin.x
@@ -202,23 +202,40 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22447082, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 311.962
+      value: 317.0253
       objectReference: {fileID: 0}
     - target: {fileID: 22447082, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -13.860759
       objectReference: {fileID: 0}
     - target: {fileID: 22447082, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 613.924
+      value: 624.0506
       objectReference: {fileID: 0}
     - target: {fileID: 22447082, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17.721518
       objectReference: {fileID: 0}
     - target: {fileID: 11421544, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
       propertyPath: m_FontData.m_AlignByGeometry
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421544, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 11421544, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421544, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421544, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
+      propertyPath: m_Text
+      value: This is an (example) of how big the box will beome when there is a lot
+        of text to fill it up...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e26ca02b729f34e4e930e0bc301a3035, type: 2}
@@ -364,7 +381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22481992, guid: 7ce4b8baf237b304386bd132d81aa3ae, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -355.94937
       objectReference: {fileID: 0}
     - target: {fileID: 22481992, guid: 7ce4b8baf237b304386bd132d81aa3ae, type: 2}
       propertyPath: m_SizeDelta.x
@@ -372,7 +389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22481992, guid: 7ce4b8baf237b304386bd132d81aa3ae, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17.721518
       objectReference: {fileID: 0}
     - target: {fileID: 22481992, guid: 7ce4b8baf237b304386bd132d81aa3ae, type: 2}
       propertyPath: m_AnchorMin.x
