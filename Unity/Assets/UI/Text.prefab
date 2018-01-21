@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 22265584}
   - component: {fileID: 11456674}
   - component: {fileID: 114708525070848622}
+  - component: {fileID: 114975132680523106}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -121,3 +122,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &114975132680523106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f078d4daaf1a1f54e8701b76213ae156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Renderer: {fileID: 22265584}
+  m_ScaleDuration: 0.2
+  m_FadeDuration: 0.8
