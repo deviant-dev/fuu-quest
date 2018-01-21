@@ -1,4 +1,7 @@
 === GhostPart01 ===
+#left:Player
+#right:Ghost
+#back:Forest
 <h4> Part 1 </h4>
 
 (Someplace inside the woods)
@@ -51,6 +54,9 @@ Thank you...
 -> GhostPart02
 
 === GhostPart02 ===
+#left:Player
+#right:Ghost
+#back:Forest
 <h4> Part 2 </h4>
 
 (By the grand old tree)
@@ -75,6 +81,9 @@ Thank you...
 
 (Girl is nowhere to be found again.)
 
+#left:Player
+#right:Futa03
+#back:Greenhouse
 <h3> Futa 3 </h3>
 <h4> Part 2 </h4>
 -> Futa03Part02.ghost

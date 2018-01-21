@@ -1,4 +1,7 @@
 === Female02Part01 ===
+#left:Player
+#right:Female02
+#back:Greenhouse
 <h4> Part 1 </h4>
 (Found near the greenhouse)
 
@@ -121,6 +124,9 @@ I'll wait for you in the woods, then!
 -> Female02Part02
 
 === Female02Part02 ===
+#left:Player
+#right:Female02
+#back:Forest
 <h4> Part 2 </h4>
 
 (Found in the woods by a particular creature.)
@@ -153,6 +159,9 @@ I need to... Get to work on my Fuu assignment!
 
 
 === Female02Part03 ===
+#left:Player
+#right:Female02
+#back:Forest
 <h4> Part 3 </h4>
 
 (Found in a new location in the woods. Most likely behind a tree)
@@ -182,6 +191,9 @@ However, there are still more experiments to do!
 
 
 === Female02Part04 ===
+#left:Player
+#right:Female02
+#back:Forest
 <h4> Part 4 </h4>
 
 (Found in the woods having sex with a magic creature)
@@ -213,6 +225,9 @@ I should have a little nap...
 
 
 === Female02Part05 ===
+#left:Player
+#right:Female02
+#back:Greenhouse
 <h4> Part 5 </h4>
 
 (Found sleeping in a snug corner of the greenhouse)

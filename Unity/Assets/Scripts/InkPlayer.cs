@@ -32,6 +32,9 @@ namespace Fuu {
 
 		private void StartStory() {
 			m_Story = new Story(m_InkJsonAsset.text);
+			m_Backdrop.DestroyAllChildren();
+			m_OnStageLeft.DestroyAllChildren();
+			m_OnStageRight.DestroyAllChildren();
 			Refresh();
 		}
 
@@ -44,6 +47,29 @@ namespace Fuu {
 			if (m_Story.canContinue) {
 				string text = m_Story.Continue().Trim();
 				CreateContentView(text);
+
+				foreach (string t in m_Story.currentTags) {
+					string[] pieces = t.Split(':');
+					if (pieces.Length != 2) { continue; }
+
+					if (pieces[0] == "back" && m_Assets.Backdrops.ContainsKey(pieces[1])) {
+						m_Backdrop.DestroyAllChildren();
+						GameObject go = Instantiate(m_Assets.Backdrops[pieces[1]], m_Backdrop.transform);
+						go.transform.ResetTransform();
+					}
+
+					if (pieces[0] == "right" && m_Assets.Characters.ContainsKey(pieces[1])) {
+						 m_OnStageRight.DestroyAllChildren();
+						GameObject go = Instantiate(m_Assets.Characters[pieces[1]], m_OnStageRight.transform);
+						go.transform.ResetTransform();
+					}
+
+					if (pieces[0] == "left" && m_Assets.Characters.ContainsKey(pieces[1])) {
+						 m_OnStageLeft.DestroyAllChildren();
+						GameObject go = Instantiate(m_Assets.Characters[pieces[1]], m_OnStageLeft.transform);
+						go.transform.ResetTransform();
+					}
+				}
 				DelayTracker.DelayAction(m_NextDelay, Next);
 				return;
 			}
@@ -78,6 +104,8 @@ namespace Fuu {
 			text = text.ReplaceRegex(@"\<h4\>", "<size=25><b>");
 			text = text.ReplaceRegex(@"\</h[34]\>", "</b></size>");
 			text = text.ReplaceRegex(@"\</?h[0-9]\>", "");
+			text = text.ReplaceRegex(@"\<i\>", "<i><color=#6FB278FF>");
+			text = text.ReplaceRegex(@"\</i\>", @"</color></i>");
 			return text;
 		}
 

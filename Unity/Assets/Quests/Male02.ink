@@ -2,6 +2,9 @@ VAR Male02_ingredient = false
 
 
 === Male02Part01 ===
+#left:Player
+#right:Male02
+#back:Forest
 <h4> Part 1 </h4>
 (Found somewhere in the woods)
 
@@ -30,6 +33,9 @@ I had to use some school resources.
 
 + <i>Okay, okay![] Calm down. I won't say anything.</i>
 + <i>You're in trouble.</i>
+#left:Player
+#right:Futa03
+#back:Greenhouse
 <h3> Futa 3 </h3>
 <h4> Part 2 </h4>
 -> Futa03Part02.potion

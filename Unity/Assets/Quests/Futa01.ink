@@ -1,6 +1,9 @@
 VAR Futa01_has_mushroom = false
 
 === Futa01Part01 ===
+#left:Player
+#right:Futa01
+#back:Forest
 <h4> Part 1 </h4>
 (Seen someplace dark and shady)
 

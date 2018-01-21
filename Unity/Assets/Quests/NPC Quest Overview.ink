@@ -15,12 +15,12 @@ INCLUDE Ghost.ink
 <h3> Table of Contents </h3>
 
 + [Male 1] <h3> Male 1 </h3> -> Male01Part01 ->
-+ [Male 2] <h3> Male 2 </h3> -> Male02Part01 ->
-+ [Female 1] <h3> Female 1 </h3> -> Female01Part01 ->
-+ [Female 2] <h3> Female 2 </h3> -> Female02Part01 ->
-+ [Futa 1] <h3> Futa 1 </h3> -> Futa01Part01 ->
-+ [Futa 3] <h3> Futa 3 </h3> -> Futa03Part01 ->
-+ [Ghost] <h3> Ghost </h3> -> GhostPart01 ->
++ [Male 2] <h3> Male 2 </h3> -> Male02Part01 -> #right:Male02 #back:Forest
++ [Female 1] <h3> Female 1 </h3> -> Female01Part01 -> #right:Female01 #back:Greenhouse
++ [Female 2] <h3> Female 2 </h3> -> Female02Part01 -> #right:Female02 #back:Greenhouse
++ [Futa 1] <h3> Futa 1 </h3> -> Futa01Part01 -> #right:Futa01 #back:Forest
++ [Futa 3] <h3> Futa 3 </h3> -> Futa03Part01 -> #right:Futa03 #back:Greenhouse
++ [Ghost] <h3> Ghost </h3> -> GhostPart01 -> #right:Ghost #back:Forest
 + Jump to... -> shortcuts
 
 - -> TableOfContents

@@ -1,4 +1,7 @@
 === Futa03Part01 ===
+#left:Player
+#right:Futa03
+#back:Greenhouse
 <h4> Part 1 </h4>
 
 (Found in the greenhouse at the desk)
@@ -36,6 +39,9 @@ Now back to my important teacher *yawn* things...
 
 
 === Futa03Part02 ===
+#left:Player
+#right:Futa03
+#back:Greenhouse
 <h4> Part 2 </h4>
 
 + \(With no quests active) -> no_quests
@@ -112,6 +118,9 @@ Em.
 + Thanks. ->->
 
 === Futa03Part03a ===
+#left:Player
+#right:Futa03
+#back:Forest
 <h4> Part 3 </h4>
 
 (Found in MALE 2 Location.)
@@ -146,6 +155,9 @@ I need to *burp* get back to… Grading papers or whatever.
 -> Futa03Part03b
 
 === Futa03Part03b ===
+#left:Player
+#right:Futa03
+#back:Greenhouse
 <h4> Part 3b </h4>
 (Back at Greenhouse or someplace between.)
 
@@ -205,6 +217,9 @@ Quit being so damned awkward about it! You’re going to drive me up a wall with
 
 
 === Futa03Part04 ===
+#left:Player
+#right:Futa03
+#back:Forest
 <h4> Part 4 </h4>
 (By the grand old tree)
 

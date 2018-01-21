@@ -3,6 +3,9 @@ VAR Male01_has_outfit = false
 
 
 === Male01Part01 ===
+#left:Player
+#right:Male01
+#back:Forest
 <h4> Part 1 </h4>
 (Found near a specific creature location.)
 

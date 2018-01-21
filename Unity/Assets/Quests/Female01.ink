@@ -1,4 +1,7 @@
 === Female01Part01 ===
+#left:Player
+#right:Female01
+#back:Forest
 <h4> Part 1 </h4>
 (Found standing somewhere near the forest entrance)
 
