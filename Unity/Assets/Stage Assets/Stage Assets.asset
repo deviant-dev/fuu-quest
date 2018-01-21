@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5073b0478475ec44d879a7a879c222ee, type: 3}
+  m_Name: Stage Assets
+  m_EditorClassIdentifier: 
+  m_Backdrops:
+  - {fileID: 1708128728203582, guid: f926c79a3830475449f1bbd0d4271669, type: 2}
+  - {fileID: 1694556068765688, guid: b552180e797c8e140b340eb33655f7dc, type: 2}
+  m_Characters:
+  - {fileID: 1500955348546042, guid: 96ecac98f7980b44caf154b9f0f8f2a4, type: 2}
+  - {fileID: 1612381758005608, guid: c31d7e6bc3f9bea4f83c1dab73478b24, type: 2}
+  - {fileID: 1594387934088066, guid: 7f78744ebaeddce4d9343ba9a7dc83a4, type: 2}
+  - {fileID: 1271353239256788, guid: d4df67b5b65d06d41b85c8d6c05bfac1, type: 2}
+  - {fileID: 1577984584493538, guid: 58e692ecef772cb4891160834b532515, type: 2}
+  - {fileID: 1793394520573308, guid: e0a464c6b950be44e8cac5ba9fd731b2, type: 2}
+  - {fileID: 1049674693999748, guid: e8a3f58884133e940bf9df61019d8d40, type: 2}
+  - {fileID: 1244220447325360, guid: b30f2c395ac78e847b616931775df049, type: 2}

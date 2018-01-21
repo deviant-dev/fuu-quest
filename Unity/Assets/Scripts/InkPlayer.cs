@@ -6,6 +6,7 @@ using UnityEngine.UI;
 namespace Fuu {
 	public class InkPlayer : MonoBehaviour {
 		[SerializeField] private TextAsset m_InkJsonAsset;
+		[SerializeField, QuickSelectAsset("t:StageAssets")] private StageAssets m_Assets;
 
 		[Header("Settings")]
 
@@ -24,7 +25,6 @@ namespace Fuu {
 		[SerializeField] private Transform m_OnStageRight;
 		[SerializeField] private Transform m_OffStageLeft;
 		[SerializeField] private Transform m_OffStageRight;
-
 
 		private Story m_Story;
 
