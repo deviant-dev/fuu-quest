@@ -21,7 +21,7 @@ Probably...
 I haven't tried it yet.
 
 + <i>What are you waiting for?</i> -> why_wait
-+ <i>[Ask the professor?]Maybe you should have the professor look at it first.</i>
++ <i>Maybe you should have the professor look at it first.</i>
 
 - NO! Don't tell the professor!
 
@@ -31,7 +31,7 @@ I haven't tried it yet.
 And I didn’t exactly grow all these ingredients myself...
 I had to use some school resources.
 
-+ <i>Okay, okay![] Calm down. I won't say anything.</i>
++ <i>Okay, okay! Calm down. I won't say anything.</i>
 + <i>You're in trouble.</i>
 #left:Player
 #right:Futa03
@@ -84,7 +84,7 @@ I haven't been able to get my hands on any Succubus Milk...
 
 - Any luck?
 
-+ <i>No[ :(] luck so far... Sorry.</i>
++ <i>No luck so far... Sorry.</i>
 
 Let me know when you've found it, won't you?
 
@@ -93,7 +93,7 @@ Let me know when you've found it, won't you?
 = has_ingredient
 How did you manage?
 
-+ [Found it!] <i>Yeah, Here it is!</i>
++ <i>Yeah, Here it is!</i>
 ~ Male02_ingredient = false
 
 - Perfect! Let's give it a try then.
@@ -128,8 +128,8 @@ I never had to cum so bad in my life! It feels like I'll burst!
 I'm so close to the edge but I can't get off!
 Got any ideas?!
 
-+ <i>[I can fix this...] Okay, okay... I think I have an idea. Just... Don't move.</i>
-+ [<i>I better get the professor!</i>]
++ <i>Okay, okay... I think I have an idea. Just... Don't move.</i>
++ <i>I better get the professor!</i>
 <h3> Futa 3 </h3>
 <h4> Part 2 </h4>
 -> Futa03Part02.potion
@@ -148,7 +148,7 @@ Thought I would explode.
 
 I don't want to think about it...
 
-+ <i>So, that potion[...] of yours... Do you mind if I...?</i>
++ <i>So, that potion of yours... Do you mind if I...?</i>
 
 - Uh... Sure, I guess so. I don't think it agrees with me...
 

@@ -11,22 +11,22 @@ Going into the forest already?
 
 - So you already know the kind of Fuu you want to raise?
 
-+ <i>[Yup!] Yeah, I think so!</i> -> think_so
-+ <i>[No...] I'm not really sure yet...</i> -> not_sure
++ <i>Yeah, I think so!</i> -> think_so
++ <i>I'm not really sure yet...</i> -> not_sure
 
 = not_sure
 
 That's no way to go about Fuu hatching!
 You should be prepared and go in with a plan!
 
-+ <i>[Help me?] Hmm... You're right! Will you help?</i> -> help_me
-+ <i>[It's fine.] I think I'll be fine.</i> -> nevermind
++ <i>Hmm... You're right! Will you help?</i> -> help_me
++ <i>I think I'll be fine.</i> -> nevermind
 
 = nevermind
 Okay, just thought I would try and help.
 
 + <i>Thanks.</i> ->->
-+ <i>[Wait! Help!] I'm sorry! You can help me?</i> -> help_me
++ <i>I'm sorry! You can help me?</i> -> help_me
 
 
 = think_so
@@ -47,13 +47,13 @@ Do you know what creature you will need to hatch that Fuu?
 - I'm not so sure that's right...
 Would you like me to help you understand?
 
-+ <i>[Okay] Oh, okay.</i> -> help_me
-+ <i>No[], I'm fine.</i> -> nevermind
++ <i>Oh, okay.</i> -> help_me
++ <i>No, I'm fine.</i> -> nevermind
 
 = success
 Sound's like you really know your stuff!
 
-+ <i>[Oh yeah] I have a plan!</i>
++ <i>I have a plan!</i>
 
 - In that case, why don't you take some of this Fuu food!
 I'm raising a similar Fuu and have some extra.
@@ -84,20 +84,20 @@ That's what I'm here for.
 The professor and I have an arrangement.
 Because I do so well in class, I can help instruct the other students when she... If she isn't available.
 
-+ <i>I see... []So you must be very smart!</i>
++ <i>I see... So you must be very smart!</i>
 
 - Well I...
 You could say that!
 Most think I'm being a "know-it-all" but I really just want to help! I promise!
 
-+ <i>That's very kind[.] of you. Maybe some day you will become a professor yourself!</i>
++ <i>That's very kind of you. Maybe some day you will become a professor yourself!</i>
 
 - \*Blush*
 You think so? That would be something, wouldn't it!
 Well, speaking of teaching! I believe you were curious to know more about Fuu!
 
-+ <i>Yes[], please!</i> -> info ->->
-+ <i>[No] On second thought, I should probably go.</i> -> nevermind
++ <i>Yes, please!</i> -> info ->->
++ <i>On second thought, I should probably go.</i> -> nevermind
 
 = info
 Excellent!
@@ -118,16 +118,16 @@ You brought your book to class today, right?
 In there, you will find a whole section on Fuu traits and which ones are inherited when you have sex with particular creatures.
 Basically, the Fuu will share some resemblance to whatever creature it came from.
 
-+ <i>[So simple!] When you put it that way, it's pretty simple isn't it?</i>
++ <i>When you put it that way, it's pretty simple isn't it?</i>
 
 - I'm glad you understand!
 
-+ <i>[You explain well.] You explain things very well!</i>
++ <i>You explain things very well!</i>
 
 - \*Blush*
 Please, come back if you want me to explain anything more to you!
 
-+ <i>Thanks[] for the advice! See you!</i> ->->
++ <i>Thanks for the advice! See you!</i> ->->
 
 === Female01Part02
 <h4> Part 2 </h4>
@@ -135,9 +135,9 @@ Please, come back if you want me to explain anything more to you!
 - Hi there!
 Would you like some help?
 
-+ <i>[Fuu Info] I'd like to know about Fuu!</i> -> Female01Part01.info ->->
-+ <i>[Fuu Food] How do I get Fuu food?</i> -> food
-+ <i>[Hatching] How can Fuu change after hatching?</i> -> hatching
++ <i>I'd like to know about Fuu!</i> -> Female01Part01.info ->->
++ <i>How do I get Fuu food?</i> -> food
++ <i>How can Fuu change after hatching?</i> -> hatching
 + <i>No thanks!</i> ->->
 
 = food
@@ -147,7 +147,7 @@ Fuu will eat may of the different plants found in the woods here.
 Because they feed on magic energy, any magical plant you can pick up will work great as food for them!
 Just take some from the woods, and place it in front of your Fuu. If they are feeling hungry, they will eat it on their own!
 
-+ <i>[Any plant?] They will absorb any plant I bring them from the woods? That makes things simple!</i>
++ <i>They will absorb any plant I bring them from the woods? That makes things simple!</i>
 
 - Exactly!
 Magical creatures also produce magic energy.
@@ -155,17 +155,17 @@ You will notice this energy emitting from them during sex and when the creature 
 They feel so much pleasure from sex that it materializes!
 You can pick this up and give it to the Fuu. They will absorb the energy just like food!
 
-+ <i>Eating materialized pleasure?[] I wonder what that's like...</i>
++ <i>Eating materialized pleasure? I wonder what that's like...</i>
 
 - Don't tell me you are thinking of trying it yourself!
 The effect it has on wizardkind haven't been thoroughly tested!
 Who knows what will happen!
 
-+ <i>Okay! Okay![] I'll try to control myself...</i>
++ <i>Okay! Okay! I'll try to control myself...</i>
 
 - Please, come back if you want me to explain anything more to you!
 
-+ <i>Thanks[] for the advice! See you!</i> ->->
++ <i>Thanks for the advice! See you!</i> ->->
 
 = hatching
 Right! This will be good to know!
@@ -194,6 +194,6 @@ I guess using magical creatures for sport runs in our blood...
 - Anyway.
 Please, come back if you want me to explain anything more to you!
 
-+ <i>Thanks[] for the advice! See you!</i>
++ <i>Thanks for the advice! See you!</i>
 
 ->->

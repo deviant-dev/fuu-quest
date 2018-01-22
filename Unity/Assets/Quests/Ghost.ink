@@ -15,14 +15,14 @@ I’ve been here for some time, you know.
 
 - Hmm… Well, long enough to forgot it seems.
 
-+ <i>[You aren't with the class?</i>] You mean, you didn’t come here with the class?</i>
++ <i>You mean, you didn’t come here with the class?</i>
 
 - Ah! Now that does sound familiar!
 I came here with my class...
 Looking for something… Waiting...
 No, that can’t be right.
 
-+ <i>You sure you’re not lost?[] You seem confused.</i>
++ <i>You sure you’re not lost? You seem confused.</i>
 
 - No I am not lost. Though I fear I have lost myself.
 
@@ -45,7 +45,7 @@ But you never came.
 - It grew dark and I lost my way.
 A cold fell over me and I remember nothing else...
 
-+ <i>Hmmm...[] Sounds like this old tree is where I should start.</i>
++ <i>Hmmm... Sounds like this old tree is where I should start.</i>
 
 - A grand old tree… Our secret place...
 

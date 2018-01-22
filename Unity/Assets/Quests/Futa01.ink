@@ -15,7 +15,7 @@ Hey there\~ Mind helping me out?
 - Well, I’m looking for something.
 A kind of mushroom...
 
-+ <i>[In the dark?] Hmm, I don’t expect we’ll find much over here in the dark.</i>
++ <i>Hmm, I don’t expect we’ll find much over here in the dark.</i>
 
 - Actually, this mushroom should be easiest to find in the dark. It’s bioluminescent!
 
@@ -26,7 +26,7 @@ They are a wonderfully useful mushroom that let off a beautiful deep blue glow.
 I’ve been told that finding their clusters in a dark cave is just like looking up at starry night sky!
 I’d imagine that’s where the name comes from.
 
-+ <i>Sounds amazing![] Any luck so far?</i>
++ <i>Sounds amazing! Any luck so far?</i>
 
 - They’re supposed to be native to this area but I haven't seen any since I’ve been out here...
 
@@ -36,7 +36,7 @@ I’d imagine that’s where the name comes from.
 - That sure is nice of you.
 There’s no need for you to strain yourself but if you happen to see any...
 
-+ <i>Absolutely![] If I see any, I’ll bring them right back to you.</i>
++ <i>Absolutely! If I see any, I’ll bring them right back to you.</i>
 
 - Great, thank you!
 I’ll be here if you manage to find any.
@@ -81,7 +81,7 @@ That’s great! Let me see.
 
 - They are great! Where did you find them?
 
-+ <i>They were in a dark place[] just like you said! The cave over that way.
++ <i>They were in a dark place just like you said! The cave over that way.
 - Perfect, so there’s more there?</i>
 
 + <i>Yeah, lots of ‘em.</i>
@@ -96,7 +96,7 @@ I’d like to see the Starry Night Caps for myself...
 I appreciate you helping me out so much!
 These Starry Night Caps really are invaluable to me.
 
-+ <i>[No problem.] It’s really no problem! I had fun exploring.</i>
++ <i>It’s really no problem! I had fun exploring.</i>
 
 - Hopefully I see you again soon\~
 
@@ -134,12 +134,12 @@ Some of the magical creatures can be pretty judgemental...
 Would you be willing to help me out one more time?
 
 + <i>Absolutely, yes.</i>
-+ <i>[Actually...] Maybe I’m not the best person to ask for this… Sorry.</i> -> leave
++ <i>Maybe I’m not the best person to ask for this… Sorry.</i> -> leave
 
 - \(NPC dominant sex encounter until climax)
 I would have never imagined having a dick would feel this good.
 
-+ <i>[Wow] Merlin have mercy! That was outstanding!</i>
++ <i>Merlin have mercy! That was outstanding!</i>
 
 - Now that this thing is approved, I’m ready to start exploring the woods\~
 See you around?

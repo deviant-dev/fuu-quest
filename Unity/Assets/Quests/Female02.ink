@@ -25,7 +25,7 @@ Could you tell I was embarrassed to be up there?
 
 - I could feel my face turning red...
 
-+ <i>It's a bit unusual[...] to get new students part way through the school year. How did you manage that?</i>
++ <i>It's a bit unusual to get new students part way through the school year. How did you manage that?</i>
 
 - I switched schools when they dropped Ecomythology from the curriculum.
 It's what I want to become when I graduate, you see... An Ecomythologist
@@ -71,7 +71,7 @@ I don't love everything about Ecomythology, but I chose it because it's a step t
 
 = why_greenhouse
 
-+ <i>So why are you still in the greenhouse?[] Aren't you excited to get out and see the Fuu?</i>
++ <i>So why are you still in the greenhouse? Aren't you excited to get out and see the Fuu?</i>
 
 - Yes! I am very interested in the Fuu.
 It's just that...
@@ -82,7 +82,7 @@ Can you keep a secret?
 - Okay... Well, the thing is...
 You need to have sex with a magic creature to produce a Fuu, don't you?
 
-+ <i>Oh[] yeah... I can see how that-</i>
++ <i>Oh yeah... I can see how that-</i>
 
 - No, I'm fine with that part! I'm actually kind of eager to experience their various... rituals.
 It's just that I want to be in the right mood... You know?
@@ -101,7 +101,7 @@ Watch others having sex.
 
 - When I would catch my Mom and Dad in bed together, I would just lose it!
 
-+ <i>Okay, maybe[...] that's a little weird...</i>
++ <i>Okay, maybe that's a little weird...</i>
 
 - Like a waterfall, you know!?
 
@@ -112,8 +112,8 @@ Do you think that maybe...
 Maybe I could watch you for a little while?
 If I saw you with one of the creatures, that would just put me in a perfect place...
 
-+ <i>Okay![] That might be kind of fun!</i>
-+ <i>Let me get back to you.[] I'm a little busy right now.</i>
++ <i>Okay! That might be kind of fun!</i>
++ <i>Let me get back to you. I'm a little busy right now.</i>
 Okay then... I'll be in here. ->->
 
 - Ooh! I'm getting butterflies just thinking about it!
@@ -139,19 +139,19 @@ I asked them and they said it would be just fine if I watched from here.
 - I'm so excited!
 Whenever you're ready!
 
-+ <i>I'll do my best...[] These creatures can be quite a handful...</i>
++ <i>I'll do my best... These creatures can be quite a handful...</i>
 
 - \(Sex:???)
 
 Merlin's pants! That was amazing!
 I came twice just by watching you!
 
-+ <i>You weren't kidding[] about that waterfall...</i>
++ <i>You weren't kidding about that waterfall...</i>
 
 - Oh gosh! I'm losing control of myself!
 I need to... Get to work on my Fuu assignment!
 
-+ <i>Happy to help![] See you later...</i>
++ <i>Happy to help! See you later...</i>
 
 - \(She runs off to where the player can't follow)
 
@@ -212,7 +212,7 @@ Keep wa-ah-ah-tching!
 Wow... That was...
 \*Yawn*
 
-+ <i>Yawn, is right![] You were doing some extensive research!</i>
++ <i>Yawn, is right! You were doing some extensive research!</i>
 
 I better... Go organize my notes...
 \*Yawn*

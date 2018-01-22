@@ -14,7 +14,7 @@ VAR Male01_has_outfit = false
 - Huh? Oh...
 Well, I'm a little embarrased
 
-+ [Creatures?] <i>Is it those creatures?</i>
++ <i>Is it those creatures?</i>
 
 - Yeah.. well...
 The thing is, I want to raise a certain type of Fuu and they're the only creatures that will work.
@@ -25,24 +25,24 @@ The thing is, I want to raise a certain type of Fuu and they're the only creatur
 I must've cum 3 times already just by looking at them!
 I wouldn't last one minute out there...
 
-+ [I can help.] <i>Oh, I see...Maybe there is some way I could help?</i>
++ <i>Oh, I see...Maybe there is some way I could help?</i>
 
 - You would help me?!
 But how?
 
-+ [Get Food?] <i>I could get the food for you!</i>
++ <i>I could get the food for you!</i>
     You would do that?! Thank you so much!
     -> Male01Part02
-+ [Practice?] <i>What if you had some more practice?</i>
++ <i>What if you had some more practice?</i>
 
 - What do you mean?
 
-+ [Let's Fuck!] <i>You know.. Like... We could fuck for a while...</i>
++ <i>You know.. Like... We could fuck for a while...</i>
 <i>If I dressed up, it would make for good practice for the real thing.</i>
 
 - Yeah... I mean, it's worth a try, right?
 
-+ [Yes!] <i>I think so!</i>
++ <i>I think so!</i>
 <i>Let me find an outfit and I'll be back for you.</i>
 <i>Just be ready!</i>
 
@@ -56,7 +56,7 @@ But how?
 
 + { not Male01_has_food } (Gather Food)
     ~ Male01_has_food = true
-+ { Male01_has_food } (Eat Food) 
++ { Male01_has_food } (Eat Food)
     ~ Male01_has_food = false
 + \(Approach Student) -> approach
 
@@ -65,23 +65,23 @@ But how?
 = approach
 {
     - Male01_has_food:
-        + [Give Food] <i>I'm starting to understand your fixation with these creatures... Here you go!</i>
+        + <i>I'm starting to understand your fixation with these creatures... Here you go!</i>
         -> give_food
     - else:
         Did you get some of the food?
-        
-        + [No] None yet, sorry. -> start
+
+        + None yet, sorry. -> start
 }
 
 = give_food
 
 ~ Male01_has_food = false
 
-        
+
 - Wow! You were amazing!
 My Fuu will be very grateful!
-        
-+ [My Pleasure] <i>It was my pleasure. Really...</i>
+
++ <i>It was my pleasure. Really...</i>
 
 ->->
 
@@ -102,9 +102,9 @@ My Fuu will be very grateful!
 = approach
 - About this plan... I'm not so sure I-
 
-+ {not Male01_has_outfit} [BRB] <i>Give me a little while longer!</i>
++ {not Male01_has_outfit} <i>Give me a little while longer!</i>
     -> start
-+ {Male01_has_outfit} [Ready!!] You ready?
++ {Male01_has_outfit} You ready?
 
 - Gah! You look... Oh boy...
 
@@ -114,15 +114,15 @@ My Fuu will be very grateful!
 
 (Sex: Cums almost immediately)
 
-+ [Nice] <i>You did really well!</i>
++ <i>You did really well!</i>
 
 - You think?
 
-+ <i>Well...[] I mean, there's always room for improvement.</i>
++ <i>Well...I mean, there's always room for improvement.</i>
 
 - Oh...
 
-+ [Keep trying?] <i>Ah! Don't make that face! We can keep practicing and you'll get better!</i>
++ <i>Ah! Don't make that face! We can keep practicing and you'll get better!</i>
 
 Time passes...
 
@@ -158,7 +158,7 @@ Time passes...
 
 - As I'll ever be.
 
-+ <i>Show me[] what you got\~</i>
++ <i>Show mewhat you got\~</i>
 
 - \(Sex: Lasts much longer before cumming.)
 
@@ -207,16 +207,16 @@ Just give me a moment to gather myself..
 
 (Sex)
 
-+ <i>You've really gotten the hang of this[] haven't you!</i>
++ <i>You've really gotten the hang of thishaven't you!</i>
 <i>I was ready to burst from the beginning~</i>
-    
+
 - All thanks to you really~
 
-+ <i>You were dedicated[] and practiced a lot!</i>
++ <i>You were dedicatedand practiced a lot!</i>
 
 - \*Blush*
 
-+ [It's time] <i>Well it's about time you put your new skills to the test!</i>
++ <i>Well it's about time you put your new skills to the test!</i>
 
 - You're right...
 I can finally take on those lewd creatures and get the Fuu food!

@@ -102,7 +102,7 @@ Who-
 - It’s...
 Where did you find this?
 
-+ <i>By a great big tree stump[] over that way.</i>
++ <i>By a great big tree stump over that way.</i>
 
 - \*gasp*
 Em.
@@ -173,7 +173,7 @@ I want to cum so bad but my dick is too huge!
 Just stroking or sucking myself isn’t gonna cut it!
 
 + <i>Okay! Just hang on!</i>
-+ <i>[Um...] Don’t worry professor, I’m s-sure it will wear off soon!</i>
++ <i>Don’t worry professor, I’m s-sure it will wear off soon!</i>
 Errrr! Thanks for nothing kid! ->->
 
 - \(Sex: A type of sex happens)
