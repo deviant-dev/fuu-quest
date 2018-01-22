@@ -31,12 +31,12 @@ MonoBehaviour:
     inkAsset: {fileID: 102900000, guid: cb4b5e01fe6d410449eed912c0afc139, type: 3}
     jsonAsset: {fileID: 0}
   - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: e619f2a2da22c53449fd6a042d29c414, type: 3}
-    jsonAsset: {fileID: 0}
-  - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: d4d5d058392f03f40b52cae842174a5b, type: 3}
     jsonAsset: {fileID: 0}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 6a66406246330cd4f85ed0e149236a23, type: 3}
     jsonAsset: {fileID: 4900000, guid: 71c4af1350ee9054cb975e3b86f77abd, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: e619f2a2da22c53449fd6a042d29c414, type: 3}
+    jsonAsset: {fileID: 0}
   compilationStack: []
