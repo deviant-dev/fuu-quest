@@ -15,7 +15,7 @@ namespace Fuu {
 		[Header("UI")]
 
 		[SerializeField] private Canvas m_Canvas;
-		[SerializeField] private Text m_TextPrefab;
+		[SerializeField] private Line m_TextPrefab;
 		[SerializeField] private Button m_ButtonPrefab;
 
 		[Header("Stage")]
@@ -28,7 +28,7 @@ namespace Fuu {
 
 		private Story m_Story;
 
-		private void Awake() { StartStory(); }
+		private void OnEnable() { StartStory(); }
 
 		private void StartStory() {
 			m_Story = new Story(m_InkJsonAsset.text);
@@ -93,9 +93,9 @@ namespace Fuu {
 		}
 
 		private void CreateContentView(string text) {
-			Text storyText = Instantiate(m_TextPrefab);
-			storyText.text = CleanText(text);
-			storyText.transform.SetParent(m_Canvas.transform, false);
+			Line storyLine = Instantiate(m_TextPrefab);
+			storyLine.Text = CleanText(text);
+			storyLine.transform.SetParent(m_Canvas.transform, false);
 		}
 
 		private static string CleanText(string text) {
