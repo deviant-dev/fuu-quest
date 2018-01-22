@@ -233,20 +233,20 @@ I should have a little nap...
 (Found sleeping in a snug corner of the greenhouse)
 (Player reads note)
 
-<i>I believe I have made an ecomythical breakthrough during my field research. By reaching an elevated state of pleasure, I have become capable of materializing magic energy myself! This could be paramount in better understanding the magical creatures of the forest and what causes the unique inception of Fuu within wizardkind.</i>
+<i>I believe I have made an ecomythical breakthrough during my field research. By reaching an elevated state of pleasure, I have become capable of materializing magic energy myself! This could be paramount in better understanding the magical creatures of the forest and what causes the unique inception of Fuu within wizardkind.</i> #writing
 
-<i>Note to self:</i>
-<i>Remember to take more naps in between research sessions...</i>
+<i>Note to self:</i> #writing
+<i>Remember to take more naps in between research sessions...</i> #writing
 
-<i>P.S.</i>
-<i>If you are reading this, I am dead...</i>
+<i>P.S.</i> #writing
+<i>If you are reading this, I am dead...</i> #writing
 
 + [Turn over paper.]
 
-- <i>...tired. So I can't give you your reward personally. Just reach into my blouse and grab what’s there. You should find - Well you will find one of three things - One of which being a unique hybrid Fuu food I produced during my experiments today. I want you to have it!</i>
+- <i>...tired. So I can't give you your reward personally. Just reach into my blouse and grab what’s there. You should find - Well you will find one of three things - One of which being a unique hybrid Fuu food I produced during my experiments today. I want you to have it!</i> #writing
 
-<i>Thanks for your help!</i>
-<i>- Hannah Hopkin</i>
+<i>Thanks for your help!</i> #writing
+<i>- Hannah Hopkin</i> #writing
 
 (Acquired Creature/Witch Hybrid Fuu food.)
 

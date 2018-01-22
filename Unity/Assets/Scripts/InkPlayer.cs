@@ -15,7 +15,11 @@ namespace Fuu {
 		[Header("UI")]
 
 		[SerializeField] private Canvas m_Canvas;
-		[SerializeField] private Line m_TextPrefab;
+		[SerializeField] private VerticalLayoutGroup m_LayoutGroup;
+		[SerializeField] private Line m_TitleLinePrefab;
+		[SerializeField] private Line m_SubtitleLinePrefab;
+		[SerializeField] private Line m_DefaultTextPrefab;
+		[SerializeField] private Line m_PlayerTextPrefab;
 		[SerializeField] private Button m_ButtonPrefab;
 
 		[Header("Stage")]
@@ -43,31 +47,40 @@ namespace Fuu {
 			Next();
 		}
 
+		private bool m_FirstLine = false;
+
 		private void Next() {
 			if (m_Story.canContinue) {
 				string text = m_Story.Continue().Trim();
-				CreateContentView(text);
+				CreateContentView(text, m_FirstLine);
+				m_FirstLine = false;
 
 				foreach (string t in m_Story.currentTags) {
 					string[] pieces = t.Split(':');
 					if (pieces.Length != 2) { continue; }
 
-					if (pieces[0] == "back" && m_Assets.Backdrops.ContainsKey(pieces[1])) {
+					if (pieces[0] == "back") {
 						m_Backdrop.DestroyAllChildren();
-						GameObject go = Instantiate(m_Assets.Backdrops[pieces[1]], m_Backdrop.transform);
-						go.transform.ResetTransform();
+						if (m_Assets.Backdrops.ContainsKey(pieces[1])) {
+							GameObject go = Instantiate(m_Assets.Backdrops[pieces[1]], m_Backdrop.transform);
+							go.transform.ResetTransform();
+						}
 					}
 
-					if (pieces[0] == "right" && m_Assets.Characters.ContainsKey(pieces[1])) {
-						 m_OnStageRight.DestroyAllChildren();
-						GameObject go = Instantiate(m_Assets.Characters[pieces[1]], m_OnStageRight.transform);
-						go.transform.ResetTransform();
+					if (pieces[0] == "right") {
+						m_OnStageRight.DestroyAllChildren();
+						if (m_Assets.Characters.ContainsKey(pieces[1])) {
+							GameObject go = Instantiate(m_Assets.Characters[pieces[1]], m_OnStageRight.transform);
+							go.transform.ResetTransform();
+						}
 					}
 
-					if (pieces[0] == "left" && m_Assets.Characters.ContainsKey(pieces[1])) {
-						 m_OnStageLeft.DestroyAllChildren();
-						GameObject go = Instantiate(m_Assets.Characters[pieces[1]], m_OnStageLeft.transform);
-						go.transform.ResetTransform();
+					if (pieces[0] == "left") {
+						m_OnStageLeft.DestroyAllChildren();
+						if (m_Assets.Characters.ContainsKey(pieces[1])) {
+							GameObject go = Instantiate(m_Assets.Characters[pieces[1]], m_OnStageLeft.transform);
+							go.transform.ResetTransform();
+						}
 					}
 				}
 				DelayTracker.DelayAction(m_NextDelay, Next);
@@ -89,36 +102,28 @@ namespace Fuu {
 
 		private void OnClickChoiceButton(Choice choice) {
 			m_Story.ChooseChoiceIndex(choice.index);
+			m_FirstLine = true;
 			Refresh();
 		}
 
-		private void CreateContentView(string text) {
-			Line storyLine = Instantiate(m_TextPrefab);
-			storyLine.Text = CleanText(text);
-			storyLine.transform.SetParent(m_Canvas.transform, false);
+
+		private void CreateContentView(string text, bool skipTransition = false) {
+			Line linePrefab = GetLinePrefab(text);
+			Line storyLine = Instantiate(linePrefab, m_Canvas.transform, false);
+			storyLine.SetText(text, skipTransition);
 		}
 
-		private static string CleanText(string text) {
-			if (text.Contains("<i>") && !text.Contains("</i>")) { text += "</i>"; }
-			text = text.ReplaceRegex(@"\<h3\>", "<size=30><b>");
-			text = text.ReplaceRegex(@"\<h4\>", "<size=25><b>");
-			text = text.ReplaceRegex(@"\</h[34]\>", "</b></size>");
-			text = text.ReplaceRegex(@"\</?h[0-9]\>", "");
-			text = text.ReplaceRegex(@"\<i\>", "<i><color=#6FB278FF>");
-			text = text.ReplaceRegex(@"\</i\>", @"</color></i>");
-			return text;
+		private Line GetLinePrefab(string text) {
+			if (text.Contains("<h4")) { return m_SubtitleLinePrefab; }
+			if (text.Contains("<h")) { return m_TitleLinePrefab; }
+			if (text.Contains("<i>") && !m_Story.currentTags.Contains("writing")) { return m_PlayerTextPrefab; }
+			return m_DefaultTextPrefab;
 		}
 
 		private Button CreateChoiceView(string text) {
-			Button choice = Instantiate(m_ButtonPrefab);
-			choice.transform.SetParent(m_Canvas.transform, false);
-
-			Text choiceText = choice.GetComponentInChildren<Text>();
-			choiceText.text = CleanText(text);
-
-			HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
-			layoutGroup.childForceExpandHeight = false;
-
+			Button choice = Instantiate(m_ButtonPrefab, m_Canvas.transform, false);
+			Line line = choice.GetComponent<Line>();
+			line.SetText(text);
 			return choice;
 		}
 	}
