@@ -1,5 +1,8 @@
 # fuu-quest
 An example fuu quest page.
 
-# website
+# Inky-build Website
 https://deviant-dev.github.io/fuu-quest/
+
+# Unity-build Website
+https://deviant-dev.github.io/fuu-quest/WebGL/
