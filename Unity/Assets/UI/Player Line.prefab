@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 22481992}
+  - component: {fileID: 222166288700575526}
   - component: {fileID: 114665931827499404}
   - component: {fileID: 114889979747379302}
-  - component: {fileID: 222166288700575526}
   m_Layer: 5
   m_Name: Player Line
   m_TagString: Untagged
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.253}
-  m_EffectDistance: {x: 4, y: -8}
+  m_EffectDistance: {x: 2, y: -4}
   m_UseGraphicAlpha: 1
 --- !u!114 &114388087483733328
 MonoBehaviour:
@@ -159,10 +159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 10
-    m_Right: 5
+    m_Right: 10
     m_Top: 5
     m_Bottom: 3
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
@@ -248,10 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f078d4daaf1a1f54e8701b76213ae156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Text: {fileID: 114611918267349592}
-  m_TextRenderer: {fileID: 222465371445067278}
-  m_BackgroundRenderer: {fileID: 222839608854801950}
-  m_LayoutGroup: {fileID: 114665931827499404}
   m_FadeDuration: 1
   m_ScrollSpeed: 2
   m_HiddenBottomPadding: -15
