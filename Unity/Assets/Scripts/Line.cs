@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Deviant.Utils;
+﻿using Deviant.Utils;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +9,8 @@ namespace Fuu {
 		[SerializeField] private int m_ScrollSpeed = 2;
 		[SerializeField] private int m_HiddenBottomPadding = -10;
 
-		private CanvasRenderer m_BackgroundRenderer;
+		private CanvasRenderer[] m_Renderers;
 		private Text m_Text;
-		private CanvasRenderer m_TextRenderer;
 		private LayoutGroup m_LayoutGroup;
 		private int m_TargetBottom;
 		private float m_Alpha;
@@ -22,40 +20,32 @@ namespace Fuu {
 			get { return m_Alpha; }
 			set {
 				m_Alpha = Mathf.Clamp01(value);
-				m_TextRenderer.SetAlpha(m_Alpha);
-				if (m_BackgroundRenderer) { m_BackgroundRenderer.SetAlpha(m_Alpha); }
+				Renderers.ForEach(r => r.SetAlpha(m_Alpha));
 			}
 		}
 
-		protected virtual void Awake() {
-			m_Text = GetComponentInChildren<Text>();
-			m_TextRenderer = m_Text.GetComponent<CanvasRenderer>();
-			m_BackgroundRenderer = GetComponentsInChildren<CanvasRenderer>().LastOrDefault(r => r != m_TextRenderer);
-			m_LayoutGroup = GetComponent<LayoutGroup>();
-		}
+		private CanvasRenderer[] Renderers { get { return m_Renderers != null ? m_Renderers : (m_Renderers = GetComponentsInChildren<CanvasRenderer>()); } }
+		private Text Text { get { return m_Text ? m_Text : (m_Text = GetComponentInChildren<Text>()); } }
+		private LayoutGroup LayoutGroup { get { return m_LayoutGroup ? m_LayoutGroup : (m_LayoutGroup = GetComponent<LayoutGroup>()); } }
 
 		private void Start() {
 			if (m_Skip) { return; }
-			m_TargetBottom = m_LayoutGroup.padding.bottom;
-			m_LayoutGroup.padding.bottom = m_HiddenBottomPadding;
-			m_TextRenderer.SetAlpha(0);
-			if (m_BackgroundRenderer) { m_BackgroundRenderer.SetAlpha(0); }
+
+			m_TargetBottom = LayoutGroup.padding.bottom;
+			LayoutGroup.padding.bottom = m_HiddenBottomPadding;
+			Alpha = 0;
 		}
 
 		private void LateUpdate() {
 			if (m_Skip) { return; }
 
-			if (m_LayoutGroup.padding.bottom < m_TargetBottom) {
-				m_LayoutGroup.padding.bottom = Mathf.Min(m_LayoutGroup.padding.bottom + m_ScrollSpeed, m_TargetBottom);
-			}
-			else if (Alpha < 1) {
-				Alpha += Time.deltaTime * m_FadeDuration;
-			}
+			if (LayoutGroup.padding.bottom < m_TargetBottom) { LayoutGroup.padding.bottom = Mathf.Min(LayoutGroup.padding.bottom + m_ScrollSpeed, m_TargetBottom); }
+			else if (Alpha < 1) { Alpha += Time.deltaTime * m_FadeDuration; }
 			else { m_Skip = true; }
 		}
 
 		public void SetText(string text, bool skipTransition = false) {
-			m_Text.text = CleanText(text);
+			Text.text = CleanText(text);
 			m_Skip = skipTransition;
 		}
 
@@ -64,7 +54,7 @@ namespace Fuu {
 			Alpha = 1;
 			Sequence sequence = DOTween.Sequence();
 			sequence.Append(DOTween.To(() => Alpha, v => Alpha = v, 0, 0.5f).OnComplete(() => UnityUtils.DestroyObject(this)));
-			sequence.Append(DOTween.To(() => m_LayoutGroup.padding.bottom, (v) => m_LayoutGroup.padding.bottom = v, m_HiddenBottomPadding, 0.5f));
+			sequence.Append(DOTween.To(() => LayoutGroup.padding.bottom, v => LayoutGroup.padding.bottom = v, m_HiddenBottomPadding, 0.5f));
 			return sequence;
 		}
 
