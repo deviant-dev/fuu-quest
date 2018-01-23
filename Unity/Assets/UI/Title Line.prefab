@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222982985735516846}
   - component: {fileID: 114876850558977764}
   - component: {fileID: 114784151839866704}
+  - component: {fileID: 114566663788604400}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -46,6 +47,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114566663788604400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064749094352820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50bd3722271142d49a4b9ab42e43016a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FadeDuration: 0.2
+  m_TravelSpeed: 20
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114653920072897912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +98,7 @@ MonoBehaviour:
     m_Left: 5
     m_Right: 5
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 10
   m_ChildAlignment: 7
   m_Spacing: 0
   m_ChildForceExpandWidth: 1

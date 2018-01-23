@@ -62,7 +62,9 @@ I haven't been able to get my hands on any Succubus Milk...
 
 + <i>Sure, wait here.</i>
 
-- Thank you! -> Male02Part02
+- Thank you!
+
+-> Male02Part02
 
 
 === Male02Part02 ===
