@@ -35,8 +35,10 @@ namespace Fuu {
 
 		private Story m_Story;
 		private int m_ResponseIndex;
-		private string m_RightCharacter;
-		private string m_LeftCharacter;
+		private string m_LastBack;
+		private string m_LastRight;
+		private string m_LastLeft;
+		private bool m_OnFirstLine;
 
 		private void OnEnable() { StartStory(); }
 
@@ -54,10 +56,11 @@ namespace Fuu {
 		private void Refresh() {
 			float delay = 0;
 			foreach (Line line in m_Canvas.GetComponentsInChildren<Line>().Where(l => l)) {
-				line.Fade().SetDelay(delay);
-				delay += 0.25f;
+				line.FadeOut().SetDelay(delay);
+				delay += 0.1f;
 			}
 
+			m_OnFirstLine = true;
 			Next();
 		}
 
@@ -81,13 +84,15 @@ namespace Fuu {
 				string right;
 				string left;
 
-				// Collect possible commands.
-				if (GetTagValue("back", out back)) {
+				// Check possible commands.
+				if (GetTagValue("back", out back) && back != m_LastBack) {
+					m_LastBack = back;
 					m_Backdrop.DestroyAllChildren();
 					if (m_Assets.Backdrops.ContainsKey(back)) { Instantiate(m_Assets.Backdrops[back], m_Backdrop, false); }
 				}
 
-				if (GetTagValue("right", out right)) {
+				if (GetTagValue("right", out right) && right != m_LastRight) {
+					m_LastRight = right;
 					m_OnStageRight.DestroyAllChildren();
 					if (m_Assets.Characters.ContainsKey(right)) {
 						GameObject go = Instantiate(m_Assets.Characters[right], m_OnStageRight, false);
@@ -96,7 +101,8 @@ namespace Fuu {
 					}
 				}
 
-				if (GetTagValue("left", out left)) {
+				if (GetTagValue("left", out left) && left != m_LastLeft) {
+					m_LastLeft = left;
 					m_OnStageLeft.DestroyAllChildren();
 					if (m_Assets.Characters.ContainsKey(left)) {
 						GameObject go = Instantiate(m_Assets.Characters[left], m_OnStageLeft, false);
@@ -105,63 +111,24 @@ namespace Fuu {
 					}
 				}
 
+				if (m_OnFirstLine) {
+					m_OnFirstLine = false;
+					Next();
+					return;
+				}
+
 				TextFade tf = nextLine.GetComponentInChildren<TextFade>();
 
 				if (tf) { tf.OnComplete.AddListener(Next); }
 				else { DelayTracker.DelayAction(m_NextDelay, Next); }
 
 				return;
-
-				// Skip showing characters if they are already there.
-				if (right == m_RightCharacter) right = null;
-				if (left == m_LeftCharacter) left = null;
-
-				Sequence sequence = DOTween.Sequence();
-
-				// Handle background change.
-				if (!back.IsNullOrEmpty()) {
-					sequence.Append(ClearStage());
-
-					sequence.AppendCallback(() => {
-						m_Backdrop.DestroyAllChildren();
-						if (m_Assets.Backdrops.ContainsKey(back)) {
-							GameObject go = Instantiate(m_Assets.Backdrops[back], m_Backdrop);
-							go.transform.ResetTransform();
-						}
-					});
-				}
-
-				// Handle characters leaving.
-				else {
-					if (!right.IsNullOrEmpty()) { sequence.Append(ClearStageRight()); }
-					if (!left.IsNullOrEmpty()) { sequence.Append(ClearStageLeft()); }
-				}
-
-				sequence.AppendInterval(0.2f);
-
-				// Handle right character returning.
-				if (!right.IsNullOrEmpty()) {
-					Debug.Log("Adding character creation callback for " + right + " on right side.");
-					sequence.AppendCallback(() => EnterCharacter(right, m_OnStageRight, m_OffStageRight));
-					m_RightCharacter = right;
-				}
-
-				// Handle left character returning.
-				if (!left.IsNullOrEmpty()) {
-					Debug.Log("Adding character creation callback for " + left + " on left side.");
-					sequence.AppendCallback(() => EnterCharacter(left, m_OnStageLeft, m_OffStageLeft));
-					m_LeftCharacter = left;
-				}
-
-				TextFade textFade = nextLine.GetComponentInChildren<TextFade>();
-
-				if (textFade) { textFade.OnComplete.AddListener(Next); }
-				else { DelayTracker.DelayAction(m_NextDelay, Next); }
-
-				return;
 			}
 
 			if (m_Story.currentChoices.Count > 0) {
+				// Fade old choices.
+				GetComponentsInChildren<Line>().Where(l => l.LineType == Line.Type.Player).ForEach(l => l.FadeOut());
+
 				for (int i = 0; i < m_Story.currentChoices.Count; i++) {
 					Choice choice = m_Story.currentChoices[i];
 					ChoiceLine button = CreateChoiceView(choice.text.Trim());
@@ -170,35 +137,6 @@ namespace Fuu {
 			} else {
 				ChoiceLine choice = CreateChoiceView("End of story.\nRestart?");
 				choice.OnClick.AddListener(StartStory);
-			}
-		}
-
-		private Tween ClearStage() { return DOTween.Sequence().Insert(0, ClearStageRight()).Insert(0, ClearStageLeft()); }
-
-		private Tween ClearStageRight() { return ClearStageSide(m_OnStageRight, m_OffStageRight); }
-		private Tween ClearStageLeft() { return ClearStageSide(m_OnStageLeft, m_OffStageLeft); }
-
-		private Tween ClearStageSide(Transform onStage, Transform offStage) {
-			if (onStage.childCount == 1) {
-				Transform child = onStage.GetChild(0);
-				return child.DOMove(offStage.position, m_SlideDuration).SetEase(Ease.InSine).OnComplete(() => UnityUtils.DestroyObject(child));
-			}
-
-			Debug.Log("No one to move. Returning an empty sequence.");
-			return DOTween.Sequence().OnComplete(() => Debug.Log("Empty sequence is done."));
-		}
-
-		private void EnterCharacter(string character, Transform onStage, Transform offStage) {
-			Debug.Log("Trying to create " + character + " in " + onStage);
-			if (m_Assets.Characters.ContainsKey(character)) {
-				GameObject go = Instantiate(m_Assets.Characters[character], onStage);
-				go.transform.ResetTransform();
-				go.transform.position = offStage.position;
-				go.transform.DOLocalMove(Vector3.zero, m_SlideDuration).SetEase(Ease.OutSine);
-				Debug.Log("Created " + character + " in " + onStage);
-			}
-			else {
-				Debug.LogWarning("Can't find character '" + character + "'", this);
 			}
 		}
 
@@ -216,7 +154,6 @@ namespace Fuu {
 
 			if (insertIndex >= 0 && linePrefab == m_PlayerLinePrefab) {
 				storyLine.transform.SetSiblingIndex(insertIndex);
-				DelayTracker.DelayAction(5, () => storyLine.Fade());
 			}
 
 			return storyLine;

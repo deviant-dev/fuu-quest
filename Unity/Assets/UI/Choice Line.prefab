@@ -352,8 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ffd5e75d1c4832b8c567fb084c19ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Type: 6
   m_FadeDuration: 1
-  m_ScrollSpeed: 2
+  m_SlideDuration: 0.5
   m_HiddenBottomPadding: -15
   OnClick:
     m_PersistentCalls:

@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FadeDuration: 0
   m_TravelSpeed: 20
+  m_FadeWholeWords: 0
   OnComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -76,8 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f078d4daaf1a1f54e8701b76213ae156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Type: 4
   m_FadeDuration: 1
-  m_ScrollSpeed: 2
+  m_SlideDuration: 0.5
   m_HiddenBottomPadding: -15
 --- !u!114 &114728717683649510
 MonoBehaviour:

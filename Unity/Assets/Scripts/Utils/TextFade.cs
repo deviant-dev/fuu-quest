@@ -1,5 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
+using UnityEditor.Compilation;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -13,6 +16,9 @@ namespace Deviant.Utils {
 		[Tooltip("Speed the reveal travels along the text, in characters per second"), SerializeField]
 		private float m_TravelSpeed = 8f;
 
+		[Tooltip("If checked, whole words will fade in at a time instead of individual letters."), SerializeField]
+		private bool m_FadeWholeWords;
+
 		public UnityEvent OnComplete;
 
 		// Cached reference to our Text object.
@@ -25,15 +31,20 @@ namespace Deviant.Utils {
 		// Use this for initialization
 		private void Start() {
 			m_Text = GetComponent<Text>();
+			string text = m_Text.text;
+			m_Text.text = "";
+
 			// If you don't want the text to fade right away, skip this line.
-			FadeTo(m_Text.text);
+			DelayTracker.DelayAction(0.2f, () => FadeTo(text));
 		}
 
 		private void FadeTo(string text) {
+			if (!this) return;
+
 			// Abort a fade in progress, if any.
 			StopFade();
 			// Start fading, and keep track of the coroutine so we can interrupt if needed.
-			m_Fade = StartCoroutine(FadeText(text));
+			m_Fade = m_FadeWholeWords ? StartCoroutine(FadeTextByWord(text)) : StartCoroutine(FadeTextByLetter(text));
 		}
 
 		private void StopFade() {
@@ -42,10 +53,10 @@ namespace Deviant.Utils {
 
 		// Currently this expects a string of plain text,
 		// and will not correctly handle rich text tags etc.
-		private IEnumerator FadeText(string text) {
+		private IEnumerator FadeTextByLetter(string text) {
 			int length = text.Length;
 			// Build a character buffer of our desired text,
-			// with a rich text "color" tag around every character.
+			// with a rich text "color" tag around every character or word.
 			var builder = new StringBuilder(length * 26);
 			Color32 color = m_Text.color;
 			for (int i = 0; i < length; i++) {
@@ -85,6 +96,62 @@ namespace Deviant.Utils {
 			// Once all the characters are opaque, 
 			// ditch the unnecessary markup and end the routine.
 			m_Text.text = text;
+			// Mark the fade transition as finished.
+			// This can also fire an event/message if you want to signal UI.
+			m_Fade = null;
+
+			OnComplete.Invoke();
+		}
+
+		// Currently this expects a string of plain text,
+		// and will not correctly handle rich text tags etc.
+		private IEnumerator FadeTextByWord(string text) {
+			MatchCollection words = Regex.Matches(text, @"\S+\s*");
+			int length = words.Count;
+			float duration = text.Length / m_TravelSpeed;
+			float wordPerSecond = duration / words.Count;
+
+			// Build a character buffer of our desired text,
+			// with a rich text "color" tag around every word.
+			StringBuilder builder = new StringBuilder();
+			Color32 color = m_Text.color;
+			string startColor = string.Format("<color=#{0}{1}{2}{3}{4}{5}00>", s_NibbleToHex[color.r >> 4], s_NibbleToHex[color.r & 0xF], s_NibbleToHex[color.g >> 4], s_NibbleToHex[color.g & 0xF], s_NibbleToHex[color.b >> 4], s_NibbleToHex[color.b & 0xF]);
+
+			Dictionary<int, int> alphaIndexes = new Dictionary<int, int>();
+			Debug.Log("String length = " + text.Length + " and word count = " + length);
+			for (int i = 0; i < length; i++) {
+				Match current = words[i];
+				builder.Append(startColor);
+				alphaIndexes[i] = builder.Length - 3;
+				builder.Append(current.Value);
+				builder.Append("</color>");
+			}
+
+			// Each frame, update the alpha values along the fading frontier.
+			float fadingProgress = 0f;
+			int opaqueWords = -1;
+			while (opaqueWords < length - 1) {
+				yield return null;
+				fadingProgress += Time.deltaTime;
+				float leadingEdge = fadingProgress / wordPerSecond;
+				int lastWord = Mathf.Min(length - 1, Mathf.FloorToInt(leadingEdge));
+				int newOpaque = opaqueWords;
+				for (int i = lastWord; i > opaqueWords; i--) {
+					byte fade =(byte) (m_FadeDuration.Approximately(0) ? 255f : (255f * Mathf.Clamp01((leadingEdge - i) / (wordPerSecond * m_FadeDuration))));
+					builder[alphaIndexes[i]] = s_NibbleToHex[fade >> 4];
+					builder[alphaIndexes[i]+1] = s_NibbleToHex[fade & 0xF];
+					if (fade == 255) { newOpaque = Mathf.Max(newOpaque, i); }
+				}
+
+				opaqueWords = newOpaque;
+				// This allocates a new string.
+				m_Text.text = builder.ToString();
+			}
+
+			// Once all the characters are opaque, 
+			// ditch the unnecessary markup and end the routine.
+			m_Text.text = text;
+
 			// Mark the fade transition as finished.
 			// This can also fire an event/message if you want to signal UI.
 			m_Fade = null;
